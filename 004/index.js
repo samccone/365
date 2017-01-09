@@ -27,10 +27,13 @@ for(let i = 0; i < groups; ++i) {
 
 performance.mark('start_fill');
 floodFill(pieces);
-
 performance.mark('end_fill');
 performance.measure('fill', 'start_fill', 'end_fill');
+
+performance.mark('start_draw');
 drawPieces(pieces);
+performance.mark('end_draw');
+performance.measure('draw', 'start_draw', 'end_draw');
 
 
 /**
